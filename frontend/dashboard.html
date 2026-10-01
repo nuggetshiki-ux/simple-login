@@ -3,124 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Crimson Butterfly</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
   </head>
   <body>
-    <header class="topbar">
-      <span class="brand">Minakami Village Archive</span>
-      <button class="logout" onclick="logout()">Logout</button>
-    </header>
+    <h1>Welcome to the Dashboard</h1>
 
-    <main>
-      <section class="hero">
-        <div class="viewfinder" aria-hidden="true">
-          <span class="corner tl"></span>
-          <span class="corner tr"></span>
-          <span class="corner bl"></span>
-          <span class="corner br"></span>
-          <span class="reticle"></span>
-        </div>
-        <p class="welcome">You have successfully logged in.</p>
-        <h1>Fatal Frame II: Crimson Butterfly Remake</h1>
-        <p class="tagline">
-          A fan-made guide to the lost village of Minakami. Raise your
-          camera and follow the crimson butterfly.
-        </p>
-      </section>
+    <p>You have successfully logged in.</p>
 
-      <section class="block">
-        <h2>The game at a glance</h2>
-        <dl class="facts">
-          <div><dt>Series</dt><dd>Fatal Frame</dd></div>
-          <div><dt>Original release</dt><dd>2003</dd></div>
-          <div><dt>Genre</dt><dd>Survival horror</dd></div>
-          <div><dt>Weapon</dt><dd>Camera Obscura</dd></div>
-        </dl>
-      </section>
-
-      <section class="block">
-        <h2>The story</h2>
-        <p>
-          Twin sisters Mio and Mayu Amakura wander into a forest while
-          chasing a crimson butterfly. They find Minakami Village, a place
-          that has vanished from the world, still bound to a terrible
-          ritual. Mayu is drawn deeper into the village, and Mio must follow
-          to bring her sister home.
-        </p>
-      </section>
-
-      <section class="block">
-        <h2>Who you will meet</h2>
-        <div class="grid">
-          <article class="card sister">
-            <h3>Mio Amakura</h3>
-            <p>
-              The younger twin and the player character. She is timid, but
-              she will face anything to protect her sister.
-            </p>
-          </article>
-          <article class="card sister">
-            <h3>Mayu Amakura</h3>
-            <p>
-              The elder twin. Her leg injury from childhood has always made
-              her lean on Mio, and the village now calls to her.
-            </p>
-          </article>
-          <article class="card">
-            <h3>The village spirits</h3>
-            <p>
-              Restless souls still walk the houses and paths. Some only
-              mourn. Others will attack when you come near.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="block">
-        <h2>The Camera Obscura</h2>
-        <p>
-          An old camera that can capture what the eye cannot. In Minakami
-          it is the only way to fight back: a photograph of a spirit hurts
-          it, and the closer it is, the harder the shot lands.
-        </p>
-        <p class="note">
-          Stay calm and keep the ghost inside the frame. Panic wastes film.
-        </p>
-      </section>
-
-      <section class="block">
-        <h2>How to play</h2>
-        <ul class="steps">
-          <li>
-            <strong>Explore.</strong> Search the village by flashlight and
-            read the notes left behind to learn what happened.
-          </li>
-          <li>
-            <strong>Raise the Camera Obscura.</strong> It is the only tool
-            that can hurt a spirit. Look through the viewfinder to find them.
-          </li>
-          <li>
-            <strong>Time your shot.</strong> Wait until a ghost is close and
-            the frame glows. A well-timed photo deals the most damage.
-          </li>
-          <li>
-            <strong>Upgrade your lens.</strong> Spend points from battles to
-            make the camera stronger for the next fight.
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      <p>Fan-made page. Fatal Frame is a trademark of its respective owners.</p>
-    </footer>
+    <button onclick="logout()">Logout</button>
 
     <script>
       function logout() {
