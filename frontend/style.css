@@ -37,3 +37,277 @@ button {
   margin-top: 15px;
   text-align: center;
 }
+
+/* =====================================================================
+   DASHBOARD THEME - Fatal Frame II: Crimson Butterfly Remake
+   Everything below is scoped to body.dashboard, so the login page
+   (index.html) and the rules above are not affected.
+   ===================================================================== */
+
+body.dashboard {
+  --ink: #0d0a0b;
+  --night: #17110f;
+  --paper: #e6dccb;
+  --ash: #9a8f84;
+  --blood: #a3141f;
+  --glow: #d8343f;
+  --line: #3a2a27;
+
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, #2a1514 0%, transparent 60%),
+    var(--ink);
+  color: var(--paper);
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  line-height: 1.8;
+}
+
+.dashboard *,
+.dashboard *::before,
+.dashboard *::after {
+  box-sizing: border-box;
+}
+
+.dashboard .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dashboard .brand {
+  color: var(--ash);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.dashboard .logout {
+  width: auto;
+  margin: 0;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--paper);
+  border: 1px solid var(--blood);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dashboard .logout:hover {
+  background: var(--blood);
+}
+
+.dashboard .logout:focus-visible {
+  outline: 2px solid var(--glow);
+  outline-offset: 3px;
+}
+
+.dashboard main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero with viewfinder */
+.dashboard .hero {
+  position: relative;
+  margin: 48px 0;
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.dashboard .viewfinder {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dashboard .corner {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 0 solid var(--glow);
+}
+
+.dashboard .tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.dashboard .tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.dashboard .bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.dashboard .br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+.dashboard .reticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  border: 1px solid rgba(216, 52, 63, 0.35);
+  border-radius: 50%;
+  animation: focus 4s ease-in-out infinite;
+}
+
+@keyframes focus {
+  0%, 100% { transform: scale(1); opacity: 0.25; }
+  50% { transform: scale(1.35); opacity: 0.7; }
+}
+
+.dashboard .welcome {
+  margin: 0 0 8px;
+  color: var(--glow);
+}
+
+.dashboard h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dashboard .tagline {
+  max-width: 52ch;
+  margin: 0 auto;
+  color: var(--ash);
+}
+
+/* Content blocks */
+.dashboard .block {
+  margin: 56px 0;
+}
+
+.dashboard h2 {
+  margin: 0 0 16px;
+  padding-left: 14px;
+  border-left: 3px solid var(--blood);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.dashboard h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--glow);
+}
+
+.dashboard .block p {
+  max-width: 68ch;
+  margin: 0;
+}
+
+.dashboard .facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  margin: 0;
+  border: 1px solid var(--line);
+}
+
+.dashboard .facts div {
+  padding: 16px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.dashboard .facts div:last-child {
+  border-right: 0;
+}
+
+.dashboard .facts dt {
+  color: var(--ash);
+  font-size: 0.85rem;
+}
+
+.dashboard .facts dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.dashboard .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.dashboard .card {
+  padding: 22px;
+  background: var(--night);
+  border: 1px solid var(--line);
+}
+
+.dashboard .card p {
+  font-size: 0.97rem;
+  color: var(--paper);
+}
+
+.dashboard .card.sister h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 8px;
+  background: var(--blood);
+}
+
+.dashboard .block p.note {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--glow);
+  background: var(--night);
+  color: var(--ash);
+  font-size: 0.97rem;
+}
+
+.dashboard .steps {
+  max-width: 68ch;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.dashboard .steps li {
+  margin-bottom: 14px;
+}
+
+.dashboard .steps li::marker {
+  color: var(--blood);
+}
+
+.dashboard .steps strong {
+  color: var(--glow);
+  font-weight: 600;
+}
+
+.dashboard footer {
+  margin-top: 72px;
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--ash);
+  font-size: 0.85rem;
+}
+
+.dashboard footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .dashboard .hero {
+    padding: 56px 20px;
+  }
+  .dashboard .facts div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .dashboard .facts div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard .reticle {
+    animation: none;
+  }
+}
