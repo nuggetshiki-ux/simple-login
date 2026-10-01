@@ -209,3 +209,61 @@ footer p {
     animation: none;
   }
 }
+
+/* ---------- Dashboard additions (all new, class-scoped; nothing above is modified) ---------- */
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0;
+  margin: 0;
+  border: 1px solid var(--line);
+}
+
+.facts div {
+  padding: 16px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.facts div:last-child {
+  border-right: 0;
+}
+
+.facts dt {
+  color: var(--ash);
+  font-size: 0.85rem;
+}
+
+.facts dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+
+.card.sister h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 8px;
+  background: var(--blood);
+}
+
+.note {
+  max-width: 68ch;
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--glow);
+  background: var(--night);
+  color: var(--ash);
+  font-size: 0.97rem;
+}
+
+@media (max-width: 600px) {
+  .facts div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .facts div:last-child {
+    border-bottom: 0;
+  }
+}
